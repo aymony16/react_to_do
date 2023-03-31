@@ -51,8 +51,6 @@ function App() {
   };
   //create list of todos and setTodos which will 
   //be a React useState,
-
-
   const [todos, setTodos] = React.useState([
     { text: "Learn about React" },
     { text: "Meet friend for lunch" },
