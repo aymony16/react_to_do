@@ -1,8 +1,13 @@
-# Getting Started with Create React App
+# Description
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+First exposure to react, this app will create a webserver that allows to add a text (to-do) item into a list and display on a webpage. 
 
-## Available Scripts
+Credit to:
+https://www.digitalocean.com/community/tutorials/how-to-build-a-react-to-do-app-with-react-hooks
+
+
+
+## Helpful tips from React app defualt README.md
 
 In the project directory, you can run:
 
