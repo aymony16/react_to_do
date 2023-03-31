@@ -73,3 +73,32 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Deployment to AWS - Dev
+1. Launch instance on EC2, AWS Linux system 
+
+2. SSH into instance
+|_ add private key, make sure you have one setup on AWS, if not create one and download
+|_ navigate to location of private key 
+|_ chmod 400 Key1.pem
+|_ Go to AWS find the instance Public DNS, should look like this
+|___ ec2-3-144-244-67.us-east-2.compute.amazonaws.com
+|_ Now run the following 
+|___ ssh -i "Key1.pem" ec2-user@ec2-3-144-244-67.us-east-2.compute.amazonaws.com
+
+
+3. Inside the ssh of the instance 
+|_ update yum (note: yum as suppose to other linux apt) 
+|___ sudo yum update
+|_ install compiler this can be python or nodejs
+|___ sudo yum install nodejs
+|_ check node version
+|___ node -v
+|_ check npx version
+|___ npx -v
+|_ check if git exist, if not install
+|___ sudo yum install git
+|_ clone repo 
+|___ git clone link_to_repo
+|_ run project 
+|___ npm start 
