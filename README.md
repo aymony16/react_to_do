@@ -78,27 +78,27 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 1. Launch instance on EC2, AWS Linux system 
 
 2. SSH into instance
-> add private key, make sure you have one setup on AWS, if not create one and download
-> navigate to location of private key 
-> chmod 400 Key1.pem
-> Go to AWS find the instance Public DNS, should look like this
-> ec2-3-144-244-67.us-east-2.compute.amazonaws.com
-> Now run the following 
-> ssh -i "Key1.pem" ec2-user@ec2-3-144-244-67.us-east-2.compute.amazonaws.com
+    1. add private key, make sure you have one setup on AWS, if not create one and    download
+    2. navigate to location of private key 
+    3. chmod 400 Key1.pem
+    4. Go to AWS find the instance Public DNS, should look like this
+    5. ec2-3-144-244-67.us-east-2.compute.amazonaws.com
+    6. Now run the following 
+    7. ssh -i "Key1.pem" ec2-user@ec2-3-144-244-67.us-east-2.compute.amazonaws.com
 
 
 3. Inside the ssh of the instance 
-> update yum (note: yum as suppose to other linux apt) 
-> sudo yum update
-> install compiler this can be python or nodejs
-> sudo yum install nodejs
-> check node version
-> node -v
-> check npx version
-> npx -v
-> check if git exist, if not install
-> sudo yum install git
-> clone repo 
-> git clone link_to_repo
-> run project 
-> npm start 
+    1. update yum (note: yum as suppose to other linux apt) 
+    2. sudo yum update
+    3. install compiler this can be python or nodejs
+    4. sudo yum install nodejs
+    5. check node version
+    6. node -v
+    7. check npx version
+    8. npx -v
+    9. check if git exist, if not install
+    10. sudo yum install git
+    11. clone repo 
+    12. git clone link_to_repo
+    13. run project 
+    14. npm start 
