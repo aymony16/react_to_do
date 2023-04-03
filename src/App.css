@@ -4,6 +4,24 @@
   padding: 30px;
 }
 
+.button-add {
+  background-color: #a0dcab;
+  align-items: center;
+  background: #fff;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-clear {
+  background-color: #b79494;
+  align-items: center;
+  background: #fff;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
 .todo-list {
   position: static;
   background: #e8e8e8;

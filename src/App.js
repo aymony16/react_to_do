@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 
-
 function TodoForm({ addTodo }) {
   //create Form 
   //create state (current_state, set_state)
@@ -31,8 +30,6 @@ function TodoForm({ addTodo }) {
   );
 }
 
-
-
 function Todo({ todo }) {
   return (
     //function used to display text dynamically
@@ -43,19 +40,17 @@ function Todo({ todo }) {
 };
 //main function --> starting point of app
 function App() {
-
   //dynamically create new list
   const addTodo = text => {
     const newTodos = [...todos, { text }];
     setTodos(newTodos);
   };
+  const clearTodo = () => {
+    setTodos([])
+  }
   //create list of todos and setTodos which will 
   //be a React useState,
-  const [todos, setTodos] = React.useState([
-    { text: "Learn about React" },
-    { text: "Meet friend for lunch" },
-    { text: "Build really cool todo app" }
-  ]);
+  const [todos, setTodos] = React.useState([]);
 
   //return is what usually being shown on the
   //app page
@@ -74,6 +69,10 @@ function App() {
           />
         ))}
         <TodoForm addTodo={addTodo} />
+        <div>
+          <button className='button-add' onClick={() => addTodo(Todo.todo)} > Add to list</button >
+          <button className='button-clear' onClick={clearTodo}>Clear list</button>
+        </div>
       </div>
     </div>
   );
